@@ -1,18 +1,16 @@
 {
   "name": "@reactual/c",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "a node.js console.log prettifier :art:",
   "main": "lib/index.js",
   "module": "lib/index.js",
   "repository": "https://github.com/reactual/c",
   "license": "MIT",
   "author": "Reactual <github@reactual.io> (https://www.github.com/reactual)",
-  "contributors": [
-    {
-      "name": "Stephen Richardson",
-      "url": "https://www.github.com/sbr464"
-    }
-  ],
+  "contributors": [{
+    "name": "Stephen Richardson",
+    "url": "https://www.github.com/sbr464"
+  }],
   "scripts": {
     "clean": "rimraf lib",
     "test": "jest",

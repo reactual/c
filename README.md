@@ -56,29 +56,29 @@ c('The total is:', total)
 ```
 
 ### Specifying a log level
-_`c`_ will autodetect Node.js Errors, otherwise defaults to the `info` level. You can also force a log level by specifying a 3rd argument.
+The most basic usage is to not specify a log level. _`c`_ defaults to `info`, or `error` if value being logged is an instance of a node.js `Error`. You can also force a specific log level by passing a 3rd argument.
 
 
 ```js
 
 const total = 2 + 2
 
-/** level unspecified, defaults to info for non-errors **/
+/** level unspecified, defaults to "info" for values that aren't instances of Error */
 c('info unspecified example, total:', total)
 
-/** info **/
+/** info, forced with abbreviation */
 c('info example, total:', total, 'i')
 
-/** info **/
+/** info, forced with full word */
 c('info, full word example, total:', total, 'info')
 
-/** warn **/
+/** warn, forced with abbreviation */
 c('warning example, total:', total, 'w')
 
-/** error **/
+/** error, forced with abbreviation */
 c('error example, total:', total, 'e')
 
-/** level unspecified, error value **/
+/** level unspecified, defaults to "error" for instances of Error */
 c('error unspecified example, total:', new Error(total))
 
 ```
@@ -88,3 +88,13 @@ Valid values for log level, You can use the full name or abbreviation:
 - `info` | `i`
 - `warn` | `w`
 - `error` | `e`
+
+If you pass an invalid value for level, _`c`_ will ignore it and fallback to `info` or `error` depending on the value being logged.
+
+In addition to instances of `Error`, the below error classes will default to the `error` level.
+
+- `AssertionError`
+- `RangeError`
+- `ReferenceError`
+- `SyntaxError`
+- `TypeError`
