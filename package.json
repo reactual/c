@@ -1,6 +1,6 @@
 {
   "name": "@reactual/c",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "a node.js console.log prettifier :art:",
   "main": "lib/index.js",
   "module": "lib/index.js",
