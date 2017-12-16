@@ -1,0 +1,60 @@
+{
+  "env": {
+    "development": {
+      "presets": [
+        ["@babel/preset-env", {
+          "targets": {
+            "node": "current"
+          }
+        }]
+      ],
+      "plugins": [
+        "syntax-dynamic-import",
+        "@babel/plugin-syntax-object-rest-spread"
+      ],
+      "ignore": [
+        "_explore",
+        "_dev",
+        "**/*.DS_Store"
+      ]
+    },
+    "test": {
+      "presets": [
+        ["@babel/preset-env", {
+          "targets": {
+            "node": "current"
+          }
+        }]
+      ],
+      "plugins": [
+        "syntax-dynamic-import",
+        "@babel/plugin-syntax-object-rest-spread"
+      ],
+      "ignore": [
+        "_explore",
+        "_dev",
+        "**/*.DS_Store"
+      ]
+    },
+    "production": {
+      "presets": [
+        ["@babel/preset-env", {
+          "targets": {
+            "node": "current"
+          }
+        }]
+      ],
+      "plugins": [
+        "syntax-dynamic-import",
+        "@babel/plugin-syntax-object-rest-spread",
+        "transform-remove-console"
+      ],
+      "ignore": [
+        "**/*.test.js",
+        "_explore",
+        "_dev",
+        "**/*.DS_Store"
+      ]
+    }
+  }
+}
