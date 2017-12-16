@@ -56,7 +56,7 @@ c('The total is:', total)
 ```
 
 ### Specifying a log level
-The most basic usage is to not specify a log level. _`c`_ defaults to `info`, or `error` if value being logged is an instance of a node.js `Error`. You can also force a specific log level by passing a 3rd argument.
+The most basic usage is to not specify a log level. _`c`_ defaults to `info`, or `error` if the value being logged is an instance of a node.js `Error`. You can also force a specific log level by passing a 3rd argument.
 
 
 ```js
