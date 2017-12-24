@@ -1,6 +1,6 @@
 {
   "name": "@reactual/c",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "a node.js console.log prettifier :art:",
   "main": "lib/index.js",
   "module": "lib/index.js",
@@ -15,9 +15,9 @@
   "scripts": {
     "clean": "rimraf lib",
     "test": "jest",
-    "b": "babel src -d lib",
-    "build": "BABEL_ENV=development babel -d lib/ src/ --quiet",
-    "build-prod": "BABEL_ENV=production babel -d lib/ src/ --quiet --compact=true --no-comments",
+    "b": "yarn build",
+    "build-dev": "BABEL_ENV=development babel -d lib/ src/ --quiet",
+    "build": "BABEL_ENV=production babel -d lib/ src/ --quiet --compact=true --no-comments",
     "generate-docs": "node_modules/.bin/jsdoc --configure .jsdoc.json"
   },
   "dependencies": {

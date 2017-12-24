@@ -48,12 +48,12 @@ export default (msg, val, type = 'info') => {
     console[o.fn](
       chalk[o.c](f.nn, o.label, f.pipe),
       msg,
+      ___,
+      inspect(val, cfg.inspect),
       ___
     )
-    typeof val === 'function' ? console[o.fn](inspect(val, cfg.inspect)) : jsome(val)
-    console[o.fn](
-      ___
-    )
+
+    // TODO json prettify -  jsome(val)
 
   } catch (err) {
 
