@@ -4,6 +4,15 @@ import _defaults from './_defaults'
 import cfg from './config'
 import dict from './dictionary'
 import f from './formats'
+import jsome from 'jsome'
+
+jsome.level = {
+    'show'    : false
+  , 'char'    : '|'
+  , 'color'   : 'gray'
+  , 'spaces'  : 2
+  , 'start'   : 0
+}
 
 
 /**
@@ -39,8 +48,10 @@ export default (msg, val, type = 'info') => {
     console[o.fn](
       chalk[o.c](f.nn, o.label, f.pipe),
       msg,
-      ___,
-      inspect(val, cfg.inspect),
+      ___
+    )
+    typeof val === 'function' ? console[o.fn](inspect(val, cfg.inspect)) : jsome(val)
+    console[o.fn](
       ___
     )
 

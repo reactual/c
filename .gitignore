@@ -34,7 +34,7 @@ build/Release
 
 # Skip compiled files
 build
-lib
+#lib
 benchmark_lib
 test-lib
 dist
